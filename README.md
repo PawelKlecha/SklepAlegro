@@ -1,4 +1,4 @@
-# Sklep Alegro
+# Sklep Allegro
 Sklep Allegro is a project that presents modern approach to Android application using Kotlin and latest tech-stack.
 
 ## Tech-stack
