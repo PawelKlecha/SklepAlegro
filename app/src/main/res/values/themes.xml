@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--Top level DayNight theme to be used in AndroidManifest.xml-->
+    <style name="Theme.Allegro.DayNight" parent="Theme.Allegro" />
+
+    <!--Base custom theme which will be shared between both light and dark theme variants-->
+    <style name="Theme.Allegro" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!--Material color attributes (light theme) -->
+        <!--colorPrimary colors map to components and elements, such as app bars and buttons. -->
+        <!--colorSecondary colors are most often used as accents on components, such as FABs and -->
+        <!--selection controls.-->
+        <item name="colorPrimary">@color/orange_500</item>
+        <item name="colorPrimaryVariant">@color/orange_700</item>
+        <item name="colorSecondary">@color/orange_500</item>
+        <item name="colorSecondaryVariant">@color/orange_700</item>
+
+        <!--colorBackground appears behind scrollable content and is used for the default window-->
+        <!--background. colorSurface is mapped to the surface of components such as cards, sheets-->
+        <!--and menus. colorError is used to indicate an error state for components such as-->
+        <!--text fields.-->
+        <item name="android:colorBackground">@color/blue_50</item>
+        <item name="colorSurface">@color/white_50</item>
+        <item name="colorError">@color/red_600</item>
+
+        <!--"On" colors define how text, icons and strokes are colored in relation to the surface-->
+        <!--on which they appear.-->
+        <item name="colorOnPrimary">@color/white_50</item>
+        <item name="colorOnSecondary">@color/white_50</item>
+        <item name="colorOnBackground">@color/black_900</item>
+        <item name="colorOnSurface">@color/black_900</item>
+        <item name="colorOnError">@color/white_50</item>
+
+        <item name="scrimBackground">@color/white_50_alpha_060</item>
+        <item name="android:statusBarColor">@color/white_50</item>
+        <item name="android:navigationBarColor">@color/nav_bar</item>
+
+        <!--Material shape attributes-->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Allegro.SmallComponent
+        </item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Allegro.MediumComponent
+        </item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Allegro.LargeComponent
+        </item>
+
+        <!--Material type attributes-->
+        <item name="textAppearanceHeadline1">@style/TextAppearance.Allegro.Headline1</item>
+        <item name="textAppearanceHeadline2">@style/TextAppearance.Allegro.Headline2</item>
+        <item name="textAppearanceHeadline3">@style/TextAppearance.Allegro.Headline3</item>
+        <item name="textAppearanceHeadline4">@style/TextAppearance.Allegro.Headline4</item>
+        <item name="textAppearanceHeadline5">@style/TextAppearance.Allegro.Headline5</item>
+        <item name="textAppearanceHeadline6">@style/TextAppearance.Allegro.Headline6</item>
+        <item name="textAppearanceSubtitle1">@style/TextAppearance.Allegro.Subtitle1</item>
+        <item name="textAppearanceSubtitle2">@style/TextAppearance.Allegro.Subtitle2</item>
+        <item name="textAppearanceBody1">@style/TextAppearance.Allegro.Body1</item>
+        <item name="textAppearanceBody2">@style/TextAppearance.Allegro.Body2</item>
+        <item name="textAppearanceButton">@style/TextAppearance.Allegro.Button</item>
+        <item name="textAppearanceCaption">@style/TextAppearance.Allegro.Caption</item>
+        <item name="textAppearanceOverline">@style/TextAppearance.Allegro.Overline</item>
+
+        <item name="emphasisHighAlpha">0.87</item>
+        <item name="emphasisMediumAlpha">0.60</item>
+        <item name="emphasisDisabledAlpha">0.38</item>
+
+        <item name="motionInterpolatorPersistent">@android:interpolator/fast_out_slow_in</item>
+        <item name="motionInterpolatorIncoming">@android:interpolator/decelerate_cubic</item>
+        <item name="motionInterpolatorOutgoing">@android:interpolator/accelerate_cubic</item>
+
+        <!--Component styles-->
+        <item name="materialAlertDialogTheme">@style/MaterialAlertDialog.Rounded</item>
+        <item name="toolbarStyle">@style/Widget.MaterialComponents.Toolbar.PrimarySurface</item>
+
+        <!--System/Platform attributes-->
+        <item name="android:windowBackground">?android:colorBackground</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+</resources>

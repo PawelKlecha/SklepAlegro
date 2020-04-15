@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_round_settings_24"
+        android:title="@string/menu_settings"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/item_theme_light"
+                android:icon="@drawable/ic_round_brightness_light_24"
+                android:title="@string/theme_mode_light"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/item_theme_dark"
+                android:icon="@drawable/ic_baseline_brightness_dark_24"
+                android:title="@string/theme_mode_dark"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/item_system_default"
+                android:icon="@drawable/ic_baseline_android_24"
+                android:title="@string/theme_mode_system_default"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>

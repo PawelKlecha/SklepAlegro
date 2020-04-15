@@ -1,0 +1,110 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+}
+
+android {
+    compileSdkVersion 29
+
+    defaultConfig {
+        applicationId "pl.pawelklecha.allegro"
+        minSdkVersion 23
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    buildFeatures{
+        dataBinding = true
+        viewBinding = true
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    // Kotlin
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.2.1'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.2.1'
+
+    // Tests
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2-alpha05'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0-alpha05'
+    testImplementation "androidx.arch.core:core-testing:2.1.0"
+
+    // AndroidX
+    implementation 'androidx.appcompat:appcompat:1.2.0-beta01'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.0-beta4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0-alpha02'
+    implementation 'androidx.core:core-ktx:1.3.0-beta01'
+
+    // Jetpack
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.3.0-alpha01'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.0-alpha01'
+    implementation "androidx.lifecycle:lifecycle-common-java8:2.2.0"
+
+    // Rx
+    def RX_VERSION = "3.0.0"
+    implementation "io.reactivex.rxjava3:rxandroid:$RX_VERSION"
+    implementation "io.reactivex.rxjava3:rxjava:$RX_VERSION"
+    implementation "io.reactivex.rxjava3:rxkotlin:$RX_VERSION"
+    implementation 'com.jakewharton.rxbinding3:rxbinding-material:3.1.0'
+
+    // Room
+    def ROOM_VERSION = "2.2.5"
+    implementation "androidx.room:room-runtime:$ROOM_VERSION"
+    implementation "androidx.room:room-ktx:$ROOM_VERSION"
+    implementation "androidx.room:room-rxjava2:$ROOM_VERSION"
+    kapt "androidx.room:room-compiler:$ROOM_VERSION"
+
+    // Retrofit
+    def RETROFIT_VERSION = "2.8.1"
+    implementation "com.squareup.retrofit2:retrofit:$RETROFIT_VERSION"
+    implementation "com.squareup.retrofit2:converter-gson:$RETROFIT_VERSION"
+
+    // Glide
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+    kapt 'com.github.bumptech.glide:compiler:4.11.0'
+
+    // Material Design
+    implementation 'com.google.android.material:material:1.2.0-alpha05'
+
+    // Lottie
+    implementation 'com.airbnb.android:lottie:3.4.0'
+
+    // Logging
+    implementation 'com.jakewharton.timber:timber:4.7.1'
+
+    // Koin
+    def KOIN_VERSION = "2.1.5"
+    implementation "org.koin:koin-android:$KOIN_VERSION"
+    implementation "org.koin:koin-androidx-scope:$KOIN_VERSION"
+    implementation "org.koin:koin-androidx-viewmodel:$KOIN_VERSION"
+    implementation "org.koin:koin-androidx-fragment:$KOIN_VERSION"
+
+    // Parceler
+    implementation 'org.parceler:parceler-api:1.1.13'
+    annotationProcessor 'org.parceler:parceler:1.1.13'
+
+}

@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Sklep Allegro</string>
+
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+
+    <!--Transition names-->
+    <string name="offer_item_transition_name">offer_item_%1$s</string>
+
+    <!--Errors-->
+    <string name="unknown_error">Nieznany błąd.</string>
+    <string name="empty_search_result">Brak ofert.</string>
+    <string name="error_title">Treść błędu:\n</string>
+    <string name="error_network_fetch">Wystąpił błąd poczas łączenia się z serwerem.</string>
+    <string name="error_loaded_data_from_db">Załadowano ostatnio pobrane dane. Po ponownym nawiązaniu połączenia zostaną one zaktualizowane.</string>
+    <string name="error_ok">OK</string>
+
+    <!--Theme Settings-->
+    <string name="theme_mode_light">Jasny</string>
+    <string name="theme_mode_dark">Ciemny</string>
+    <string name="theme_mode_system_default">Systemowy</string>
+    <string name="menu_settings">Ustawienia</string>
+    <string name="button_retry">Spróbuj ponownie</string>
+
+</resources>

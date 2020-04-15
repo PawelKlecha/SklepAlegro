@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/offers_list">
+
+    <fragment
+        android:id="@+id/offers_list"
+        android:name="pl.pawelklecha.allegro.ui.offers.OffersFragment"
+        android:label="Allegro">
+        <action
+            android:id="@+id/action_offers_list_to_offer_detail"
+            app:destination="@id/offer_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/offer_detail"
+        android:name="pl.pawelklecha.allegro.ui.offer.OfferDetailsFragment"
+        android:label="OfferDetails">
+        <argument
+            android:name="offerDetails"
+            app:argType="pl.pawelklecha.allegro.api.model.Offer" />
+        <action
+            android:id="@+id/action_offer_detail_to_offers_list"
+            app:destination="@id/offers_list" />
+    </fragment>
+
+</navigation>

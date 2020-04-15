@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="com.bumptech.glide.request.RequestListener" />
+        <import type="android.graphics.drawable.Drawable" />
+
+        <variable
+            name="offer"
+            type="pl.pawelklecha.allegro.api.model.Offer" />
+
+        <variable
+            name="retryCallback"
+            type="pl.pawelklecha.allegro.ui.common.RetryCallback" />
+
+        <variable
+            name="imageRequestListener"
+            type="com.bumptech.glide.request.RequestListener&lt;Drawable>" />
+
+        <variable
+            name="listener"
+            type="pl.pawelklecha.allegro.ui.offers.OffersListAdapter.OffersAdapterListener" />
+    </data>
+
+    <FrameLayout
+        android:id="@+id/offer_item_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/keyline_0.5"
+        android:layout_marginTop="@dimen/keyline_0.5">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{(view) -> listener.onOfferClicked(view, offer)}"
+            android:transitionName="@{@string/offer_item_transition_name(offer.id)}"
+            app:cardElevation="0dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/offer_item_imageView"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:padding="@dimen/keyline_2"
+                    android:scaleType="centerCrop"
+                    app:imageRequestListener="@{imageRequestListener}"
+                    app:imageUrl="@{offer.thumbnailUrl}"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/ShapeAppearance.MaterialComponents.MediumComponent"
+                    tools:src="@drawable/klocki" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/keyline_2"
+                    android:layout_marginTop="@dimen/keyline_2"
+                    android:layout_marginEnd="@dimen/keyline_1"
+                    android:maxLines="2"
+                    android:text="@{offer.name}"
+                    android:textAppearance="?textAppearanceBody2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/offer_item_imageView"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@string/lorem_ipsum" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/keyline_1"
+                    android:fontFamily="@font/work_sans_bold"
+                    android:textAlignment="textEnd"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/offer_item_imageView"
+                    app:priceText="@{offer.price}"
+                    tools:text="109,99 zł" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </FrameLayout>
+</layout>
